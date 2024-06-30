@@ -62,10 +62,12 @@ This project simulates IoT temperature sensors and processes their data using AW
 
 2. **Install Dependencies**:
    -Ensure you have Python and pip installed.
+   ```bash
    pip install boto3 paho-mqtt
 
-3. **Configure and Run the Simulation Script**:
+4. **Configure and Run the Simulation Script**:
    - Update Temp-Time-Generator.py with your AWS IoT endpoint and certificates:
+   ```bash
    broker = "your-iot-endpoint.amazonaws.com"
    port = 8883
    topic = "iot/temperature"
@@ -77,6 +79,6 @@ This project simulates IoT temperature sensors and processes their data using AW
    - Run the script to start publishing data to AWS IoT:
    python Temp-Time-Generator.py
 
-4. **Example query to fetch data from DynamoDB via Athena:**
+5. **Example query to fetch data from DynamoDB via Athena:**
    SELECT * FROM temperature_database.temperature_data LIMIT 10;
    
