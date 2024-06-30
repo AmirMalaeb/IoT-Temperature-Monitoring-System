@@ -80,7 +80,14 @@ This project simulates IoT temperature sensors and processes their data using AW
   - Run the script to start publishing data to AWS IoT:
     python Temp-Time-Generator.py
 
-5. **Example query to fetch data from DynamoDB via Athena:**
+
+
+5. **Analyzing Data in Athena
+
+  - Configure Athena to Use Glue Data Catalog:
+	•	Ensure Athena is configured to use the Glue Data Catalog as the data source.
+  - Run SQL Queries:
+  • In the Athena console, you can query the DynamoDB table cataloged by Glue. Example query:
    ```bash
    SELECT * FROM temperature_database.temperature_data LIMIT 10;
 
