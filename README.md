@@ -27,7 +27,7 @@ This project simulates IoT temperature sensors and processes their data using AW
 
 ## Architecture
 
-![Architecture Diagram](path_to_architecture_diagram.png)
+![Architecture Diagram](Architecture.jpg)
 
 ## Setup Instructions
 
