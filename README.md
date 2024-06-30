@@ -9,10 +9,6 @@ This project demonstrates a comprehensive IoT temperature monitoring system usin
 - [Setup Instructions](#setup-instructions)
   - [AWS Configuration](#aws-configuration)
   - [Local Setup](#local-setup)
-- [Usage](#usage)
-- [Analyzing Data in Athena](#analyzing-data-in-athena)
-- [Visualizations](#visualizations)
-- [License](#license)
 
 ## Project Overview
 
@@ -38,7 +34,7 @@ This project simulates IoT temperature sensors and processes their data using AW
    - Attach the necessary policy to allow data publishing.
 
 2. **Deploy Lambda Functions**:
-   - Upload the `process_temperature_data` Lambda function.
+   - Upload the `ProcessTemperatureData.py` Lambda function.
    - Set up necessary IAM roles with appropriate permissions for DynamoDB, SNS, and CloudWatch.
 
 3. **Set Up DynamoDB**:
@@ -62,3 +58,25 @@ This project simulates IoT temperature sensors and processes their data using AW
    ```bash
    git clone https://github.com/amirmalaeb/IoT-Temperature-Monitoring-System.git
    cd IoT-Temperature-Monitoring-System
+
+
+2. **Install Dependencies**:
+   -Ensure you have Python and pip installed.
+   pip install boto3 paho-mqtt
+
+3. **Configure and Run the Simulation Script**:
+   - Update Temp-Time-Generator.py with your AWS IoT endpoint and certificates:
+   broker = "your-iot-endpoint.amazonaws.com"
+   port = 8883
+   topic = "iot/temperature"
+   client_id = "temperature_sensor"
+   ca_path = "/path/to/AmazonRootCA1.pem"
+   cert_path = "/path/to/certificate.pem.crt"
+   key_path = "/path/to/private.pem.key"
+
+   - Run the script to start publishing data to AWS IoT:
+   python Temp-Time-Generator.py
+
+4. **Example query to fetch data from DynamoDB via Athena:**
+   SELECT * FROM temperature_database.temperature_data LIMIT 10;
+   
