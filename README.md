@@ -9,6 +9,7 @@ This project demonstrates a comprehensive IoT temperature monitoring system usin
 - [Setup Instructions](#setup-instructions)
   - [AWS Configuration](#aws-configuration)
   - [Local Setup](#local-setup)
+  - [Contact]
 
 ## Project Overview
 
@@ -82,4 +83,9 @@ This project simulates IoT temperature sensors and processes their data using AW
 5. **Example query to fetch data from DynamoDB via Athena:**
    ```bash
    SELECT * FROM temperature_database.temperature_data LIMIT 10;
+
+
+## Contact
+
+For any inquiries or feedback, please contact Amir at amir.malaeb@gmail.com.
    
