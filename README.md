@@ -9,7 +9,7 @@ This project demonstrates a comprehensive IoT temperature monitoring system usin
 - [Setup Instructions](#setup-instructions)
   - [AWS Configuration](#aws-configuration)
   - [Local Setup](#local-setup)
-  - [Contact]
+  - [Contact](#contact)
 
 ## Project Overview
 
