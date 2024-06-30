@@ -84,15 +84,16 @@ This project simulates IoT temperature sensors and processes their data using AW
 
 5. **Analyzing Data in Athena:**
 
-  - Configure Athena to Use Glue Data Catalog:
-    • Ensure Athena is configured to use the Glue Data Catalog as the data source.
-  - Run SQL Queries:
-    • In the Athena console, you can query the DynamoDB table cataloged by Glue. Example query:
+- Configure Athena to Use Glue Data Catalog:
+  • Ensure Athena is configured to use the Glue Data Catalog as the data source.
+- Run SQL Queries:
+- In the Athena console, you can query the DynamoDB table cataloged by Glue. Example query:
    ```bash
-   SELECT * FROM temperature_database.temperature_data LIMIT 10;
+   SELECT * FROM temperature_database.temperature_data LIMIT 10
 
 
 ## Contact
 
 For any inquiries or feedback, please contact Amir at amir.malaeb@gmail.com.
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or suggestions.
    
